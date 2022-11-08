@@ -1,6 +1,8 @@
 /**
  * A classe de caixa serve para guardar todo o dinheiro
- * das compras e vendas de livros.
+ * das compras e vendas de livros. A ideia é instanciar
+ * um objeto estático para que haja somente um único
+ * caixa.
  */
 
 public class Cash {

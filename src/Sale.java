@@ -1,5 +1,3 @@
-import java.util.List;
-
 /**
  * A classe de venda registra uma única venda, que por sua vez
  * fica registrado na lista de vendas.
@@ -11,21 +9,42 @@ public class Sale {
     private int id;
     private String seller;
     private String buyer;
-    private List<Book> books;
+    private Book book;
 
-    public Sale(String seller, String buyer, List<Book> books) {
+    private int quantity;
+
+    public Sale(String seller, String buyer, Book book, int quantity) {
+        this.id = counterId;
+        counterId++;
         this.seller = seller;
         this.buyer = buyer;
-        this.books = books;
+        this.book = book;
+        this.quantity = quantity;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getSeller() {
+        return seller;
+    }
+
+    public String getBuyer() {
+        return buyer;
+    }
+
+    public Book getBook() {
+        return book;
+    }
+
+    public int getQuantity() {
+        return quantity;
     }
 
     @Override
     public String toString() {
-        return "Sale{" +
-                "id=" + id +
-                ", seller='" + seller + '\'' +
-                ", buyer='" + buyer + '\'' +
-                ", books=" + books +
-                '}';
+        return String.format("\n\nID: %d, Vendedor: %s, Comprador: %s, Livro: %s, Quantidade: %d\n\n",
+                id, seller, buyer, book, quantity);
     }
 }

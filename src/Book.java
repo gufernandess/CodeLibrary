@@ -8,12 +8,16 @@ public class Book {
     private int id;
     private String name;
     private double value;
+
+    private int quantity;
     private Genre genre;
-    public Book(String name, double value, Genre genre) {
+
+    public Book(String name, double value, int quantity, Genre genre) {
         this.counterId++;
         this.id = counterId;
         this.name = name;
         this.value = value;
+        this.quantity = quantity;
         this.genre = genre;
     }
 
@@ -21,41 +25,26 @@ public class Book {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public double getValue() {
         return value;
     }
 
-    public void setValue(double value) {
-        this.value = value;
-    }
-
     public Genre getGenre() {
         return genre;
     }
 
-    public void setGenre(Genre genre) {
-        this.genre = genre;
-    }
+    public int getQuantity() { return quantity; }
+
+    public void setQuantity(int quantity) { this.quantity = quantity; }
 
     @Override
     public String toString() {
-        return "Book{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", value=" + value +
-                ", genre=" + genre +
-                '}';
+        return String.format("\n\nID: %d, Nome: %s, Preço: %.2f, Quantidade: %d, Gênero: %s\n\n",
+                id, name, value, quantity, genre);
     }
+
 }
