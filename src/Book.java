@@ -5,7 +5,7 @@
 
 public class Book {
     private static int counterId = 0;
-    private int id;
+    private final int id;
     private String name;
     private double value;
 

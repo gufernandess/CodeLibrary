@@ -1,3 +1,5 @@
+import java.io.Serializable;
+
 /**
  * A classe de caixa serve para guardar todo o dinheiro
  * das compras e vendas de livros. A ideia é instanciar
@@ -5,7 +7,7 @@
  * caixa.
  */
 
-public class Cash {
+public class Cash implements Serializable {
 
     private double Money;
 

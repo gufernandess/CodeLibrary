@@ -6,14 +6,8 @@
 
 public class Main {
     static Cash cash = new Cash(0);
-
-    //static Cash cash = (Cash) Serialization.readBinaryFile("cash.dat");
     static Sales sales = new Sales();
-
-    //static Sales sales = (Sales) Serialization.readBinaryFile("sales.dat");
     static Stock stock = new Stock();
-
-    //static Stock stock = (Stock) Serialization.readBinaryFile("stock.dat");
 
     public static void main(String[] args) {
 

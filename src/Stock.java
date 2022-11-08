@@ -1,3 +1,4 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,7 +8,7 @@ import java.util.List;
  * métodos de compra de livros.
  */
 
-public class Stock {
+public class Stock implements Serializable {
 
     private List<Book> booksList;
 

@@ -1,3 +1,4 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -6,7 +7,7 @@ import java.util.List;
  * vendas efetuadas.
  */
 
-public class Sales {
+public class Sales implements Serializable {
 
     private List<Sale> salesList;
 

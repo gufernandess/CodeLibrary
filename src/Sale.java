@@ -6,7 +6,7 @@
 public class Sale {
 
     private static int counterId = 0;
-    private int id;
+    private final int id;
     private String seller;
     private String buyer;
     private Book book;

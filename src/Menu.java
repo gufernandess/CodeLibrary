@@ -38,10 +38,6 @@ public class Menu {
             verifyCash();
         }
         if(response == 6) {
-            /*Serialization.writeBinaryFile((List<Object>) Main.cash, "cash.dat");
-            Serialization.writeBinaryFile((List<Object>) Main.sales, "sales.dat");
-            Serialization.writeBinaryFile((List<Object>) Main.stock, "stock.dat");*/
-
             System.exit(0);
         } else {
             try {
@@ -73,8 +69,10 @@ public class Menu {
         System.out.println("\n\nQuantos livros deste você irá querer?");
         int quantity = input.nextInt();
 
+        input.nextLine();
+
         System.out.println("\n\nQual é o nome do comprador?");
-        String buyer = input.next();
+        String buyer = input.nextLine();
 
         Main.sales.sellBook(id - 1, quantity, buyer);
 
@@ -107,8 +105,10 @@ public class Menu {
             Main.stock.buyBook(id - 1, quantity);
         }
         if(response == 2) {
+            input.nextLine();
+
             System.out.println("\n\nInsira o nome do livro: ");
-            String name = input.next();
+            String name = input.nextLine();
 
             System.out.println("\n\nInsira o valor unitário do livro: ");
             double value = input.nextDouble();

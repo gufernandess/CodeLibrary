@@ -2,30 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01ba06d6-627b-480d-87b9-2fd78cb1c539" name="Changes" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Book.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Cash.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Genre.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Menu.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Sale.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Sales.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Serialization.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Serialization.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Stock.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cash.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sales.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/stock.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/UML.mdj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/Book.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cash.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cash.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Cash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cash.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Purchase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Sale.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sale.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Sale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sale.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Sales.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sales.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Sales.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sales.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Serialization.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Stock.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/Stock.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Stock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cash.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sales.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stock.dat" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
