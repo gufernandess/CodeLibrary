@@ -1,9 +1,11 @@
+import java.io.Serializable;
+
 /**
  * A classe livro é usada para instanciar um livro, que pode
  * ser comprado ou vendido.
  */
 
-public class Book {
+public class Book implements Serializable{
     private static int counterId = 0;
     private final int id;
     private String name;

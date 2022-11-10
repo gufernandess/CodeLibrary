@@ -1,4 +1,4 @@
-import java.io.Serializable;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,12 +7,12 @@ import java.util.List;
  * vendas efetuadas.
  */
 
-public class Sales implements Serializable {
+public class Sales {
 
     private List<Sale> salesList;
 
     public Sales() {
-        salesList = new ArrayList<Sale>();
+        salesList = new ArrayList<>();
     }
 
     public List<Sale> getSalesList() {
@@ -37,20 +37,19 @@ public class Sales implements Serializable {
                     Main.cash.setMoney(Main.cash.getMoney() + (Main.stock.getBooksList().get(id).getValue() * quantity));
                     Main.stock.getBooksList().get(id).setQuantity(Main.stock.getBooksList().get(id).getQuantity() - quantity);
 
+
                     System.out.print("\033[H\033[2J");
                     System.out.flush();
 
                     System.out.println("A venda foi realizada com sucesso!\n\n");
-
-                    Menu.Navigation();
 
                 } else {
                     System.out.print("\033[H\033[2J");
                     System.out.flush();
 
                     System.out.println("Quantidade de livros inválida. Tente novamente.\n");
-                    Menu.makeASale();
                 }
+                Menu.Navigation();
             } catch(Exception e) {
                 System.out.print("\033[H\033[2J");
                 System.out.flush();
@@ -59,6 +58,47 @@ public class Sales implements Serializable {
                 Menu.Navigation();
             }
         }
+
+    public void readSalesData() {
+        Sale sale;
+        boolean endOfFile = false;
+
+        try (
+                FileInputStream saleFile = new FileInputStream("data/sales.dat");
+                ObjectInputStream saleStream = new ObjectInputStream(saleFile);) {
+
+            while (endOfFile == false) {
+                try {
+                    sale = (Sale) saleStream.readObject();
+                    salesList.add(sale);
+                } catch (EOFException e) {
+                    endOfFile = true;
+                }
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println("\nNenhum arquivo anterior foi lido.");
+        } catch (ClassNotFoundException e) {
+            System.out.println("\nTentando ler um objeto de uma classe desconhecida.");
+        } catch (StreamCorruptedException e) {
+            System.out.println("\nFormato de arquivo ilegível.");
+        } catch (IOException e) {
+            System.out.println("\nerro: Ocorreu um problema ao ler o arquivo.");
+        }
+    }
+
+    public void writeSalesData() {
+        try (
+                FileOutputStream saleFile = new FileOutputStream("data/sales.dat");
+                ObjectOutputStream saleStream = new ObjectOutputStream(saleFile);) {
+            for (Sale sale : salesList) {
+                saleStream.writeObject(sale);
+            }
+        } catch (IOException e) {
+            System.out.println("Ocorreu um problema ao gravar o arquivo.");
+            System.out.println(e.getMessage());
+        }
+    }
+
 
     @Override
     public String toString() {

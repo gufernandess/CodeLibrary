@@ -1,9 +1,11 @@
+import java.io.Serializable;
+
 /**
  * A classe de venda registra uma única venda, que por sua vez
  * fica registrado na lista de vendas.
  */
 
-public class Sale {
+public class Sale implements Serializable {
 
     private static int counterId = 0;
     private final int id;

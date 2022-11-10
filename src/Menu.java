@@ -1,4 +1,3 @@
-import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -38,6 +37,10 @@ public class Menu {
             verifyCash();
         }
         if(response == 6) {
+            Main.cash.writeCashData(Main.cash.getMoney(), "cash.dat");
+            Main.sales.writeSalesData();
+            Main.stock.writeStockData();
+
             System.exit(0);
         } else {
             try {

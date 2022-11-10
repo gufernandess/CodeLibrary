@@ -1,4 +1,4 @@
-import java.io.Serializable;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,12 +8,12 @@ import java.util.List;
  * métodos de compra de livros.
  */
 
-public class Stock implements Serializable {
+public class Stock {
 
     private List<Book> booksList;
 
     public Stock() {
-        booksList = new ArrayList<Book>();
+        booksList = new ArrayList<>();
     }
 
     public List<Book> getBooksList() {
@@ -104,6 +104,47 @@ public class Stock implements Serializable {
             Menu.Navigation();
         }
     }
+
+    public void readStockData() {
+        Book book;
+        boolean endOfFile = false;
+
+        try (
+                FileInputStream stockFile = new FileInputStream("data/stock.dat");
+                ObjectInputStream stockStream = new ObjectInputStream(stockFile);) {
+
+            while (endOfFile == false) {
+                try {
+                    book = (Book) stockStream.readObject();
+                    booksList.add(book);
+                } catch (EOFException e) {
+                    endOfFile = true;
+                }
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println("\nNenhum arquivo anterior foi lido.");
+        } catch (ClassNotFoundException e) {
+            System.out.println("\nTentando ler um objeto de uma classe desconhecida.");
+        } catch (StreamCorruptedException e) {
+            System.out.println("\nFormato de arquivo ilegível.");
+        } catch (IOException e) {
+            System.out.println("\nerro: Ocorreu um problema ao ler o arquivo.");
+        }
+    }
+
+    public void writeStockData() {
+        try (
+                FileOutputStream stockFile = new FileOutputStream("data/stock.dat");
+                ObjectOutputStream stockStream = new ObjectOutputStream(stockFile);) {
+            for (Book book : booksList) {
+                stockStream.writeObject(book);
+            }
+        } catch (IOException e) {
+            System.out.println("Ocorreu um problema ao gravar o arquivo.");
+            System.out.println(e.getMessage());
+        }
+    }
+
 
     @Override
     public String toString() {
