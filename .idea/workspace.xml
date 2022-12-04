@@ -2,17 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01ba06d6-627b-480d-87b9-2fd78cb1c539" name="Changes" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/src/data/cash.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/sales.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/stock.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Book.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Cash.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Genre.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Menu.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Sale.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Sales.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Stock.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cash.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sale.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sales.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sales.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Stock.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
